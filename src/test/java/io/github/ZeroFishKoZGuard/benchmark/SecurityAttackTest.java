@@ -12,9 +12,7 @@ import io.github.ZeroFishKoZGuard.impl.web3.RiskAddrValidator;
 import io.github.ZeroFishKoZGuard.impl.web3.Web3ChainIdValidator;
 import io.github.ZeroFishKoZGuard.impl.web3.Web3SignatureValidator;
 import io.github.ZeroFishKoZGuard.impl.web3.Web3WalletValidator;
-import org.example.impl.*;
 import io.github.ZeroFishKoZGuard.impl.Payment.PaymentCodeValidator;
-import org.example.impl.web3.*;
 
 import io.github.ZeroFishKoZGuard.util.XssCleanUtils;
 import io.github.ZeroFishKoZGuard.util.hash.HashStrategy;

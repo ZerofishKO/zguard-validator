@@ -9,6 +9,7 @@
     <version>1.0.0</version>
     <name>ZGuard Validator</name>
     <description>高并发轻量校验框架（支持YAML动态规则、Web3安全模块）</description>
+    <url>https://github.com/ZerofishKO/zguard-validator</url>
 
     <licenses>
         <license>
@@ -19,21 +20,21 @@
 
     <developers>
         <developer>
-            <name>Your Name</name>
-            <email>your.email@example.com</email>
-            <organization>Your Org</organization>
-            <organizationUrl>https://your-org.com</organizationUrl>
+            <name>ZerofishKO</name>
+            <email>2627090410@qq.com</email>
+            <organization>ZerofishKO</organization>
+            <organizationUrl>https://github.com/ZerofishKO</organizationUrl>
         </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/your-repo/zguard-validator.git</connection>
-        <developerConnection>scm:git:ssh://github.com:your-repo/zguard-validator.git</developerConnection>
-        <url>https://github.com/your-repo/zguard-validator</url>
+        <connection>scm:git:git://github.com/ZerofishKO/zguard-validator.git</connection>
+        <developerConnection>scm:git:ssh://github.com:ZerofishKO/zguard-validator.git</developerConnection>
+        <url>https://github.com/ZerofishKO/zguard-validator</url>
     </scm>
 
     <properties>
-        <maven.compiler.release>8</maven.compiler.release>
+        <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- 依赖版本 -->
         <snakeyaml.version>2.2</snakeyaml.version>
@@ -96,7 +97,6 @@
             <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- 可选：参数化测试支持 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
@@ -104,7 +104,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- JMH 性能测试（仅 test 范围，避免引入到生产包） -->
+        <!-- JMH 性能测试 -->
         <dependency>
             <groupId>org.openjdk.jmh</groupId>
             <artifactId>jmh-core</artifactId>
@@ -121,7 +121,7 @@
 
     <build>
         <plugins>
-            <!-- 编译插件：使用 -release 8 兼容 JDK 8+ -->
+            <!-- 编译插件：使用 release 21，删除 source/target 避免冲突 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -193,7 +193,7 @@
                 </executions>
             </plugin>
 
-            <!-- 新版 Maven Central 发布插件（替代旧版 nexus-staging-maven-plugin） -->
+            <!-- 新版 Maven Central 发布插件 -->
             <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
@@ -221,7 +221,7 @@
                 </configuration>
             </plugin>
 
-            <!-- 可选：执行 main 方法的辅助插件（用于本地测试） -->
+            <!-- 可选：执行 main 方法的辅助插件 -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -232,6 +232,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <!-- 注意：已移除旧的 distributionManagement 配置，新版插件会自动处理仓库地址 -->
 </project>

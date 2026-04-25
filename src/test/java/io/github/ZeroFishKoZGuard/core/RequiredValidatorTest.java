@@ -2,6 +2,9 @@ package io.github.ZeroFishKoZGuard.core;
 
 import io.github.ZeroFishKoZGuard.impl.RequiredValidator;
 import org.junit.jupiter.api.Test;
+
+import java.util.Collections;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class RequiredValidatorTest {
@@ -31,6 +34,7 @@ class RequiredValidatorTest {
 
     @Test
     void testValidateWithNonEmptyCollection() {
-        assertTrue(validator.validate(java.util.List.of("a")));
+        assertTrue(validator.validate(Collections.singletonList("a")));
+
     }
 }
