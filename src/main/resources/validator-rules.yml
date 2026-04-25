@@ -1,0 +1,12 @@
+validatorParams:
+  paymentCode:
+    codeLength: 8
+  web3ChainId:
+    allowedChainIds: [ "1", "56", "137", "42161", "10" ]
+  range:
+    min: 1
+    max: 10000
+
+riskLists:
+  riskWalletAddrs:
+    list: [ ]   # 空列表表示不拦截任何地址
